@@ -2,6 +2,7 @@
 
 #include "user.h"
 #include "list.h"
+#include "swapper.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -12,7 +13,7 @@ int parseSection(string id) {
   for(int i = 0; i < user::NUM_SECTIONS; i++)
     if(user::SECTIONS[i] == id)
       return i;
-  cout << "Invalid section name." << endl;
+  cout << "Invalid section name: " << id << endl;
   exit(-1);
   //return -1;
 }
@@ -61,8 +62,14 @@ int main(int argc, char **argv) {
   csvfile.close();
   delete buffer;
 
-  l.printSwaps();
+  //l.printSwaps();
   l.printUsers();
+
+  cout << endl << "Making swaps." << endl;
+  swapper sw(l);
+  sw.makeSwaps();
+  cout << "Swaps made." << endl;
+  sw.printSwaps();
   
   return 0;
 }

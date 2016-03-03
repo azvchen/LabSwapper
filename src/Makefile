@@ -3,7 +3,7 @@
 CXX=clang++ $(CXXFLAGS)
 CXXFLAGS=-Wall -O2
 DEBUG=-Wall -g
-OFILES=csvRequester.o list.o user.o
+OFILES=csvRequester.o swapper.o list.o user.o
 
 requester: $(OFILES)
 	$(CXX) $(DEBUG) $(OFILES) -o requester
@@ -14,6 +14,7 @@ requester: $(OFILES)
 clean:
 	-rm -f *.o *~ requester
 
-csvRequester.o: csvRequester.cpp user.h list.h
 list.o: list.cpp list.h user.h
 user.o: user.cpp user.h
+swapper.o: swapper.cpp swapper.h list.h user.h
+csvRequester.o: csvRequester.cpp user.h list.h

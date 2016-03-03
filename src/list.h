@@ -32,6 +32,8 @@ class list {
   vector<user> users;
 
   vector<user>::iterator getUser(string name);
+
+  friend class swapper;
 };
 
 #endif

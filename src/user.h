@@ -20,6 +20,7 @@ class user {
   bool requests[6];
 
   friend class list;
+  friend class swapper;
 };
 
 #endif
