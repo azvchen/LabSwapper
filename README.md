@@ -1,7 +1,7 @@
 Lab Swapper
 ===========
 
-[Usage](#usage) | [Customization](#customization) [Future Additions](#future)
+[Usage](#usage) | [Customization](#customization) | [Future Additions](#future)
 
 This project is designed to help students swap into preferred lab sections, when used in tandem with a Google Form.  It was originally designed for the University of Virginia’s CS 2150 course but can be modified for any class.
 
