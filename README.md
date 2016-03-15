@@ -1,7 +1,7 @@
 Lab Swapper
 ===========
 
-[Usage](#usage) | [Customization](#customization)
+[Usage](#usage) | [Customization](#customization) [Future Additions](#future)
 
 This project is designed to help students swap into preferred lab sections, when used in tandem with a Google Form.  It was originally designed for the University of Virginia’s CS 2150 course but can be modified for any class.
 
@@ -18,6 +18,13 @@ Included in the src folder is a Makefile that handles compilation of the entire 
 -----------------------------------------
 
 To customize this project for another class, the `user` class must be modified.  Specifically, the static integer `NUM_SECTIONS` and string array `SECTIONS` must be changed to reflect the number and names of the sections.  In addition, the names specified in the `SECTIONS` array must match those listed in the Google Form.
+
+
+<a name=“future”></a>Future Additions
+-------------------------------------
+
+Currently, this project only swaps in pairs; three-way swaps are not supported.
+I plan to add support for multiple-person swaps.
 
 
 <a name="license"></a>License
