@@ -1,20 +1,23 @@
-# Austin Chen, 2/18/2016
+#!/bin/bash
 
-CXX=clang++ $(CXXFLAGS)
-CXXFLAGS=-Wall -O2
-DEBUG=-Wall -g
-OFILES=csvRequester.o swapper.o list.o user.o
+# Austin Chen (azc2rc) 4/28/2016
+# Makefile
 
-requester: $(OFILES)
-	$(CXX) $(DEBUG) $(OFILES) -o requester
-	@echo "The program is ready!"
+CXX=clang++
+CXXFLAGS=-Wall -g
+
+OFILES=graph.o edge.o student.o swapper.o maxFlowFinder.o
 
 .SUFFIXES: .o .cpp
 
-clean:
-	-rm -f *.o *~ requester
+main: $(OFILES)
+	$(CXX) $(CXXFLAGS) $(OFILES)
 
-list.o: list.cpp list.h user.h
-user.o: user.cpp user.h
-swapper.o: swapper.cpp swapper.h list.h user.h
-csvRequester.o: csvRequester.cpp user.h list.h
+clean:
+	/bin/rm -f *.o *~
+
+edge.o: edge.cpp edge.h
+graph.o: graph.cpp graph.h edge.h
+maxFlowFinder.o: maxFlowFinder.cpp maxFlowFinder.h graph.h edge.h
+student.o: student.cpp student.h
+swapper.o: swapper.cpp student.h graph.h edge.h maxFlowFinder.h

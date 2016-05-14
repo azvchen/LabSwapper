@@ -1,3 +1,9 @@
-"Timestamp","What is your computing ID?","Which lab section are you currently in?","Which lab sections would you like to swap into?  (Select all that fit your schedule.)"
-"2016/02/18 2:55:26 PM EST","azc2rc","104","101;102;106"
-"2016/02/18 2:55:44 PM EST","bb4kk","106","104"
+Timestamp,What is your computing ID?,Which lab section are you currently in?,Which lab sections would you like to swap into?  (Select all that fit your schedule.)
+2/18/2016 14:55:27,azc2rc,104,"101, 102, 106"
+2/18/2016 14:55:45,bb4kk,106,104
+3/2/2016 20:20:03,charles,103,105
+3/2/2016 20:20:18,david,105,"102, 103, 106"
+3/2/2016 20:20:26,edgar,106,104
+3/2/2016 20:20:43,faith,106,"103, 104"
+3/2/2016 20:20:54,gerald,102,"101, 103, 106"
+3/2/2016 20:38:06,harold,101,"102, 104, 106"
