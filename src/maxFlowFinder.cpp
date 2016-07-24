@@ -27,15 +27,15 @@ int maxFlowFinder::addFlow(int v, int minResid, graph &flow) {
     int newMinResid;
     if(resid > 0) { // there is possibly a flow going through w
       if(minResid == -1 || resid < minResid) // minResid may not have been set yet
-	newMinResid = resid;
+        newMinResid = resid;
       else
-	newMinResid = minResid;
+        newMinResid = minResid;
       
       newMinResid = addFlow(w, newMinResid, flow);
       if(newMinResid > 0) {
-	flow.incrementEdge(newMinResid, v, w);
-	flow.incrementEdge(-1 * newMinResid, w, v);
-	return newMinResid;
+        flow.incrementEdge(newMinResid, v, w);
+        flow.incrementEdge(-1 * newMinResid, w, v);
+        return newMinResid;
       }
     }
   }

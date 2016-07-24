@@ -146,8 +146,8 @@ graph makeGraphFromStudents(const vector<student> &students) {
     
     for(int r = 0; r < numSections; r++) {
       if(s.requests[r]) {
-	g.addEdge(1, s.name, sections[r]);
-	g.addEdge(-1, sections[r], s.name);
+        g.addEdge(1, s.name, sections[r]);
+        g.addEdge(-1, sections[r], s.name);
       }
     }
 
@@ -178,8 +178,8 @@ int *findOptimalSwaps(const graph &g, int numStudents) {
     swaps[stud] = -1; // default value, no swap found
     for(int sect = 0; sect < numSections; sect++) {
       if(maxFlow.getEdge(1 + stud, 1 + numStudents + sect) == 1) {
-	swaps[stud] = sect;
-	break;
+        swaps[stud] = sect;
+        break;
       }
     }
   }
